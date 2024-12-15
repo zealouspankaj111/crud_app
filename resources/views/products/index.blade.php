@@ -21,7 +21,7 @@
         <tbody>
             @forelse($products as $product)
                 <tr>
-                    <td>{{ $loop->iteration }}</td>
+                    <td>{{ $product->id }}</td>
                     <td>{{ $product->name }}</td>
                     <td>{{ $product->price }}</td>
                     <td>{{ $product->category_names }}</td>
@@ -40,4 +40,8 @@
             @endforelse
         </tbody>
     </table>
+    <div class="d-flex justify-content-center">
+        {{ $products->links() }}
+    </div>
+
 @endsection
